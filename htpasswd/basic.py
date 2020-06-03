@@ -1,5 +1,4 @@
 from builtins import object
-from crypt import crypt
 from string import ascii_letters, digits
 from random import choice
 import subprocess
@@ -98,7 +97,8 @@ class Basic(object):
 
     def _crypt_password(self, password):
         """ Crypts password """
-
+        from crypt import crypt
+        
         def salt():
             """ Generates some salt """
             symbols = ascii_letters + digits
